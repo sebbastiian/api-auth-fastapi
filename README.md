@@ -75,13 +75,19 @@ python -m venv venv
 Windows:
 
 ```
-venv\Scripts\activate
+# Activar entorno virtual (Windows PowerShell)
+venv\Scripts\Activate.ps1
+
+# En caso de error de permisos
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ### 4. Instalar dependencias
 
 ```
 pip install -r requirements.txt
+pip install bcrypt
+pip install "passlib[bcrypt]" bcrypt==4.0.1
 ```
 
 ---
